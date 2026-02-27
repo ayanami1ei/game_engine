@@ -1,0 +1,3 @@
+/home/ayanami/game engine/renderer/build/CMakeFiles/MinimalRayTracer.dir
+/home/ayanami/game engine/renderer/build/CMakeFiles/edit_cache.dir
+/home/ayanami/game engine/renderer/build/CMakeFiles/rebuild_cache.dir

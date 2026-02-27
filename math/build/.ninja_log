@@ -1,0 +1,4 @@
+# ninja log v5
+0	2	0	clean	a31eedcededa8236
+0	1091	1772159385120059866	CMakeFiles/Math.dir/src/vector.cpp.o	43b127b6130d46b7
+1091	1192	1772159385220055950	libMath.a	4c29e07870477841

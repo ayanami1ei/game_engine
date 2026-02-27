@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/ayanami/game engine/physics/build",
+  "command": "/usr/bin/g++ -I\"/home/ayanami/game engine/physics/include\" -g -std=gnu++17 -o CMakeFiles/PHYSICS.dir/src/object.cpp.o -c \"/home/ayanami/game engine/physics/src/object.cpp\"",
+  "file": "/home/ayanami/game engine/physics/src/object.cpp",
+  "output": "CMakeFiles/PHYSICS.dir/src/object.cpp.o"
+}
+]

@@ -1,0 +1,6 @@
+# ninja log v5
+0	3	0	clean	a31eedcededa8236
+2	201	1771765273306967584	CMakeFiles/MinimalRayTracer.dir/src/main.cpp.o	75afadea2d77facd
+2	528	1771765273631979124	CMakeFiles/MinimalRayTracer.dir/src/render.cu.o	4b99108de3909548
+528	562	1771765273667980402	CMakeFiles/MinimalRayTracer.dir/cmake_device_link.o	cd39f5dcccd25150
+563	600	1771765273706051947	MinimalRayTracer	3d80d1cbb080696

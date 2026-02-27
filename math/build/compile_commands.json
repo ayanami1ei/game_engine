@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/ayanami/game engine/math/build",
+  "command": "/usr/bin/g++ -I\"/home/ayanami/game engine/math/include\" -g -std=gnu++17 -o CMakeFiles/Math.dir/src/vector.cpp.o -c \"/home/ayanami/game engine/math/src/vector.cpp\"",
+  "file": "/home/ayanami/game engine/math/src/vector.cpp",
+  "output": "CMakeFiles/Math.dir/src/vector.cpp.o"
+}
+]

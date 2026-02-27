@@ -1,0 +1,3 @@
+/home/ayanami/game engine/physics/build/CMakeFiles/PHYSICS.dir
+/home/ayanami/game engine/physics/build/CMakeFiles/edit_cache.dir
+/home/ayanami/game engine/physics/build/CMakeFiles/rebuild_cache.dir

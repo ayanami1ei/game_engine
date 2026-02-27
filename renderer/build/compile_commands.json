@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/ayanami/game engine/renderer/build",
+  "command": "/usr/bin/g++ -I\"/home/ayanami/game engine/renderer/include\" -g -std=gnu++17 -o CMakeFiles/MinimalRayTracer.dir/src/main.cpp.o -c \"/home/ayanami/game engine/renderer/src/main.cpp\"",
+  "file": "/home/ayanami/game engine/renderer/src/main.cpp",
+  "output": "CMakeFiles/MinimalRayTracer.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/ayanami/game engine/renderer/build",
+  "command": "/usr/bin/nvcc -forward-unknown-to-host-compiler -I\"/home/ayanami/game engine/renderer/include\" -g -std=c++17 \"--generate-code=arch=compute_52,code=[compute_52,sm_52]\" -x cu -rdc=true -c \"/home/ayanami/game engine/renderer/src/render.cu\" -o CMakeFiles/MinimalRayTracer.dir/src/render.cu.o",
+  "file": "/home/ayanami/game engine/renderer/src/render.cu",
+  "output": "CMakeFiles/MinimalRayTracer.dir/src/render.cu.o"
+}
+]
