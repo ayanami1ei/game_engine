@@ -17,7 +17,7 @@ void Metronome::time_start()
     thread_obj = std::thread(time_work, this);
 }
 
-std::chrono::microseconds Metronome::get_duration()
+std::chrono::milliseconds Metronome::get_duration()
 {
     return duration;
 }

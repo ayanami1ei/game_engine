@@ -8,7 +8,7 @@ class Metronome
 {
 private:
     std::chrono::system_clock::time_point start;
-    std::chrono::duration<int,std::micro> duration;
+    std::chrono::duration<int,std::milli> duration;
     std::thread thread_obj;
     bool run_flag;
 
@@ -16,7 +16,7 @@ private:
 public:
     void time_start();
 
-    std::chrono::microseconds get_duration();
+    std::chrono::milliseconds get_duration();
 
     ~Metronome();
 };

@@ -7,16 +7,15 @@ int main()
     game_clock.time_start();
 
     std::string name = "obj";
-    Vector position(0.0, 0.0, 0.0);
+    Vector position;
     Mass m = 10;
     Object obj(name, m, position);
 
-    Vector v(0.0, 0.0, 1.0);
-    Force f(v);
+    Force f(0, 0, 1.0 / 1000000);
+    obj.add_force(f);
 
-    for (int i = 0; i < 100; i++)
-    {
-        obj.add_force(f);
-        std::cout << "第"<<i+1<<"次记录，obj位置：" << obj.position.x << ", " << obj.position.y << ", " << obj.position.z << std::endl;
-    }
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    std::cout << "加入10个力1秒后obj位置：" << obj.position.x << ", " << obj.position.y << ", " << obj.position.z << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    std::cout << "等待1秒后obj位置：" << obj.position.x << ", " << obj.position.y << ", " << obj.position.z << std::endl;
 }

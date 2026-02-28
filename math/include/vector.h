@@ -38,4 +38,6 @@ public:
     }
 };
 
+inline Vector zero;
+
 #endif

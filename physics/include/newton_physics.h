@@ -10,6 +10,7 @@ class Force : public Vector // 力
 {
 public:
     Force() {}
+    Force(float x,float y,float z):Vector(x,y,z){}
     explicit Force(Vector &v) : Vector(v) {}
 };
 class Displacement : public Vector // 位移
@@ -47,7 +48,7 @@ namespace NewtonPhysics // 牛顿物理定律
 
     // 计算位移
     Displacement caculate_displacement(
-        const Velocity &v,
+        Velocity &v,
         const Acceleration &a,
         const Time &t);
 

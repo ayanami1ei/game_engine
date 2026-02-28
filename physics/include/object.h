@@ -6,6 +6,7 @@
 #include <string>
 #include <queue>
 #include <thread>
+#include <mutex>
 
 class Object // 物体
 {
@@ -15,6 +16,8 @@ private:
     std::queue<Force> forces;
 
     std::thread movement;
+
+    std::mutex force_mtx;
 
     std::string name;
     int id;

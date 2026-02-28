@@ -9,11 +9,12 @@ namespace NewtonPhysics
     }
 
     Displacement caculate_displacement(
-        const Velocity &v,
+        Velocity &v,
         const Acceleration &a,
         const Time &t)
     {
-        return *(v * t + 0.5 * a * t * t).into<Displacement>();
+        auto res = *(v * t + 0.5 * a * t * t).into<Displacement>();
+        return res;
     }
 
     Velocity caculate_velocity(const Displacement &d, const Time &t)
