@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: PHYSICS
+# Project: Physics
 # Configurations: Debug
 # =============================================================================
 
@@ -41,36 +41,36 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/ayanami/game$ engine/physics/build/
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target PHYSICS
+# Object build statements for STATIC_LIBRARY target Physics
 
 
 #############################################
-# Order-only phony target for PHYSICS
+# Order-only phony target for Physics
 
-build cmake_object_order_depends_target_PHYSICS: phony || CMakeFiles/PHYSICS.dir
+build cmake_object_order_depends_target_Physics: phony || CMakeFiles/Physics.dir
 
-build CMakeFiles/PHYSICS.dir/src/object.cpp.o: CXX_COMPILER__PHYSICS_unscanned_Debug /home/ayanami/game$ engine/physics/src/object.cpp || cmake_object_order_depends_target_PHYSICS
-  DEP_FILE = CMakeFiles/PHYSICS.dir/src/object.cpp.o.d
+build CMakeFiles/Physics.dir/src/object.cpp.o: CXX_COMPILER__Physics_unscanned_Debug /home/ayanami/game$ engine/physics/src/object.cpp || cmake_object_order_depends_target_Physics
+  DEP_FILE = CMakeFiles/Physics.dir/src/object.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/ayanami/game engine/physics/include"
-  OBJECT_DIR = CMakeFiles/PHYSICS.dir
-  OBJECT_FILE_DIR = CMakeFiles/PHYSICS.dir/src
+  INCLUDES = -I"/home/ayanami/game engine/physics/include" -I"/home/ayanami/game engine/math/include"
+  OBJECT_DIR = CMakeFiles/Physics.dir
+  OBJECT_FILE_DIR = CMakeFiles/Physics.dir/src
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target PHYSICS
+# Link build statements for STATIC_LIBRARY target Physics
 
 
 #############################################
-# Link the static library libPHYSICS.a
+# Link the static library libPhysics.a
 
-build libPHYSICS.a: CXX_STATIC_LIBRARY_LINKER__PHYSICS_Debug CMakeFiles/PHYSICS.dir/src/object.cpp.o
+build libPhysics.a: CXX_STATIC_LIBRARY_LINKER__Physics_Debug CMakeFiles/Physics.dir/src/object.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = CMakeFiles/PHYSICS.dir
+  OBJECT_DIR = CMakeFiles/Physics.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = libPHYSICS.a
-  TARGET_PDB = PHYSICS.a.dbg
+  TARGET_FILE = libPhysics.a
+  TARGET_PDB = Physics.a.dbg
 
 
 #############################################
@@ -96,9 +96,73 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/ayanami/game engine/physics/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Math
+
+
+#############################################
+# Order-only phony target for Math
+
+build cmake_object_order_depends_target_Math: phony || math/CMakeFiles/Math.dir
+
+build math/CMakeFiles/Math.dir/src/vector.cpp.o: CXX_COMPILER__Math_unscanned_Debug /home/ayanami/game$ engine/math/src/vector.cpp || cmake_object_order_depends_target_Math
+  DEP_FILE = math/CMakeFiles/Math.dir/src/vector.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I"/home/ayanami/game engine/math/include"
+  OBJECT_DIR = math/CMakeFiles/Math.dir
+  OBJECT_FILE_DIR = math/CMakeFiles/Math.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Math
+
+
+#############################################
+# Link the static library math/libMath.a
+
+build math/libMath.a: CXX_STATIC_LIBRARY_LINKER__Math_Debug math/CMakeFiles/Math.dir/src/vector.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = math/CMakeFiles/Math.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = math/libMath.a
+  TARGET_PDB = Math.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build math/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/home/ayanami/game engine/physics/build/math" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build math/edit_cache: phony math/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build math/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/home/ayanami/game engine/physics/build/math" && /usr/bin/cmake --regenerate-during-build -S"/home/ayanami/game engine/physics" -B"/home/ayanami/game engine/physics/build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build math/rebuild_cache: phony math/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
-build PHYSICS: phony libPHYSICS.a
+build Math: phony math/libMath.a
+
+build Physics: phony libPhysics.a
+
+build libMath.a: phony math/libMath.a
 
 # =============================================================================
 # Folder targets.
@@ -108,7 +172,14 @@ build PHYSICS: phony libPHYSICS.a
 #############################################
 # Folder: /home/ayanami/game engine/physics/build
 
-build all: phony libPHYSICS.a
+build all: phony libPhysics.a math/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/ayanami/game engine/physics/build/math
+
+build math/all: phony math/libMath.a
 
 # =============================================================================
 # Built-in targets
@@ -117,14 +188,14 @@ build all: phony libPHYSICS.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/ayanami/game$ engine/physics/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/ayanami/game$ engine/math/CMakeLists.txt /home/ayanami/game$ engine/physics/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/ayanami/game$ engine/physics/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
+build /home/ayanami/game$ engine/math/CMakeLists.txt /home/ayanami/game$ engine/physics/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
 
 
 #############################################

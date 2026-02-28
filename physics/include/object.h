@@ -1,13 +1,19 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-#include"vector.h"
-#include<string>
+#include "vector.h"
+#include"newton_physics.h"
+#include <string>
 
-class Object{
-    private:
-        Vector position;
+class Object // 物体
+{
+private:
+    Vector position;
+    Velocity v;
+    Mass m;
 
+    std::string name;
+    std::string id;
 };
 
 #endif

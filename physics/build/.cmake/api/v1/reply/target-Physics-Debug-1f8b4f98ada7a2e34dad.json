@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libPHYSICS.a"
+			"path" : "libPhysics.a"
 		}
 	],
 	"backtrace" : 1,
@@ -26,13 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
 				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 6,
+				"line" : 12,
 				"parent" : 0
 			}
 		]
@@ -51,6 +57,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/home/ayanami/game engine/physics/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/ayanami/game engine/math/include"
 				}
 			],
 			"language" : "CXX",
@@ -68,9 +78,9 @@
 			]
 		}
 	],
-	"id" : "PHYSICS::@6890427a1f51a3e7e1df",
-	"name" : "PHYSICS",
-	"nameOnDisk" : "libPHYSICS.a",
+	"id" : "Physics::@6890427a1f51a3e7e1df",
+	"name" : "Physics",
+	"nameOnDisk" : "libPhysics.a",
 	"paths" : 
 	{
 		"build" : ".",
