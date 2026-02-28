@@ -10,19 +10,9 @@ private:
     std::string msg;
 
 public:
-    MathException(std::string &msg)
-    {
-        this->msg = msg;
-    }
-    MathException(char *msg, int len)
-    {
-
-        this->msg = std::string(msg, len);
-    }
-    const char *what() const throw()
-    {
-        return msg.c_str();
-    }
+    MathException(std::string &msg);
+    MathException(char *msg, int len);
+    const char *what() const throw();
 };
 
 #endif

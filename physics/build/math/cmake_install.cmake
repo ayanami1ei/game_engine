@@ -1,4 +1,4 @@
-# Install script for directory: /home/ayanami/game engine/math
+# Install script for directory: /home/ayanami/C++/game_engine/math
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

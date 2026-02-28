@@ -22,11 +22,11 @@ rule CXX_COMPILER__Math_unscanned_Debug
 
 
 #############################################
-# Rule for linking CXX static library.
+# Rule for linking CXX shared library.
 
-rule CXX_STATIC_LIBRARY_LINKER__Math_Debug
-  command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
-  description = Linking CXX static library $TARGET_FILE
+rule CXX_SHARED_LIBRARY_LINKER__Math_Debug
+  command = $PRE_LINK && /usr/bin/g++ -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
 
 
@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S"/home/ayanami/game engine/math" -B"/home/ayanami/game engine/math/build"
+  command = /usr/bin/cmake --regenerate-during-build -S/home/ayanami/C++/game_engine/math -B/home/ayanami/C++/game_engine/math/build
   description = Re-running CMake...
   generator = 1
 

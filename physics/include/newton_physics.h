@@ -1,14 +1,15 @@
 #ifndef NEWTON_H
 #define NEWTON_H
 
-#include"vector.h"
+#include "vector.h"
 
-typedef float Mass; // 质量
-typedef float Time; // 时间
+typedef float Mass;        // 质量
+typedef unsigned int Time; // 时间
 
 class Force : public Vector // 力
 {
 public:
+    Force() {}
     explicit Force(Vector &v) : Vector(v) {}
 };
 class Displacement : public Vector // 位移
@@ -24,6 +25,7 @@ public:
 class Velocity : public Vector // 速度
 {
 public:
+    explicit Velocity() {}
     explicit Velocity(Vector &v) : Vector(v) {}
 };
 class Impulse : public Vector // 冲量

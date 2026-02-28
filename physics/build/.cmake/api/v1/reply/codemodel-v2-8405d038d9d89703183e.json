@@ -1,0 +1,147 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "math",
+					"jsonFile" : "directory-math-Debug-e0d382458ce0066a7c90.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/home/ayanami/C++/game_engine/math",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "metronome",
+					"jsonFile" : "directory-metronome-Debug-3e7a6dec71c72d9989b6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "/home/ayanami/C++/game_engine/metronome",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Physics",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Math",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "Metronome",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Math::@874b28b4c7a3e614380d",
+					"jsonFile" : "target-Math-Debug-f134ac80438271713baa.json",
+					"name" : "Math",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Metronome::@4366e9393617d117949f",
+					"jsonFile" : "target-Metronome-Debug-792a1c6b4dc1f6d6c46d.json",
+					"name" : "Metronome",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Physics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Physics-Debug-a7bb088b6defdd5f1b78.json",
+					"name" : "Physics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Test-Debug-5bb58edcfb5e090aedec.json",
+					"name" : "Test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ayanami/C++/game_engine/physics/build",
+		"source" : "/home/ayanami/C++/game_engine/physics"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,6 @@
+# ninja log v5
+1	126	1772255287971485009	CMakeFiles/Metronome.dir/src/metronome.cpp.o	fcd55d5524e85c7b
+126	757	1772255288600250091	libMetronome.so	1e6185c27a08e935
+0	3	0	clean	a31eedcededa8236
+1	129	1772263312405334035	CMakeFiles/Metronome.dir/src/metronome.cpp.o	fcd55d5524e85c7b
+129	765	1772263313038952108	libMetronome.so	1e6185c27a08e935

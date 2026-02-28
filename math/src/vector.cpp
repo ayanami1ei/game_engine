@@ -1,5 +1,11 @@
 #include "vector.h"
 
+Vector::Vector(){
+    x=0;
+    y=0;
+    z=0;
+}
+
 Vector::Vector(float length, float width, float height)
 {
     this->x = length;
@@ -7,7 +13,7 @@ Vector::Vector(float length, float width, float height)
     this->z = height;
 }
 
-Vector::Vector(Vector& v){
+Vector::Vector(const Vector& v){
     x = v.x;
     y = v.y;
     z = v.z;

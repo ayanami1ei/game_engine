@@ -1,0 +1,3 @@
+/home/ayanami/C++/game_engine/metronome/build/CMakeFiles/Metronome.dir
+/home/ayanami/C++/game_engine/metronome/build/CMakeFiles/edit_cache.dir
+/home/ayanami/C++/game_engine/metronome/build/CMakeFiles/rebuild_cache.dir

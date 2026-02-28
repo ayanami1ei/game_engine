@@ -9,5 +9,5 @@ file(GLOB_RECURSE SRC_FILES
     "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 
-add_library(Math STATIC ${SRC_FILES})
+add_library(Math SHARED ${SRC_FILES})
 target_include_directories(Math PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")

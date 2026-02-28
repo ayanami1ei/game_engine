@@ -9,10 +9,11 @@
 class Vector
 {
 private:
-    float x, y, z;
 
 public:
-    Vector(Vector& v);
+    float x, y, z;
+    Vector();
+    Vector(const Vector& v);
     Vector(float x, float y, float z);
 
     Vector operator+(const Vector &other);
@@ -32,7 +33,8 @@ public:
             return res;
         }
 
-        throw MathException("不合法的参数，泛型参数必须是Vector的子类",58);
+        std::string msg="不合法的参数，泛型参数必须是Vector的子类";
+        throw MathException(msg);
     }
 };
 

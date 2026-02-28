@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/ayanami/C++/game_engine/metronome/build",
+  "command": "/usr/bin/g++ -DMetronome_EXPORTS -I/home/ayanami/C++/game_engine/metronome/include -g -std=gnu++17 -fPIC -o CMakeFiles/Metronome.dir/src/metronome.cpp.o -c /home/ayanami/C++/game_engine/metronome/src/metronome.cpp",
+  "file": "/home/ayanami/C++/game_engine/metronome/src/metronome.cpp",
+  "output": "CMakeFiles/Metronome.dir/src/metronome.cpp.o"
+}
+]

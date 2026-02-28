@@ -39,9 +39,9 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/ayanami/game$ engine/math/build/
+cmake_ninja_workdir = /home/ayanami/C++/game_engine/math/build/
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target Math
+# Object build statements for SHARED_LIBRARY target Math
 
 
 #############################################
@@ -49,35 +49,51 @@ cmake_ninja_workdir = /home/ayanami/game$ engine/math/build/
 
 build cmake_object_order_depends_target_Math: phony || CMakeFiles/Math.dir
 
-build CMakeFiles/Math.dir/src/vector.cpp.o: CXX_COMPILER__Math_unscanned_Debug /home/ayanami/game$ engine/math/src/vector.cpp || cmake_object_order_depends_target_Math
-  DEP_FILE = CMakeFiles/Math.dir/src/vector.cpp.o.d
-  FLAGS = -g -std=gnu++17
-  INCLUDES = -I"/home/ayanami/game engine/math/include"
+build CMakeFiles/Math.dir/src/exception.cpp.o: CXX_COMPILER__Math_unscanned_Debug /home/ayanami/C++/game_engine/math/src/exception.cpp || cmake_object_order_depends_target_Math
+  DEFINES = -DMath_EXPORTS
+  DEP_FILE = CMakeFiles/Math.dir/src/exception.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fPIC
+  INCLUDES = -I/home/ayanami/C++/game_engine/math/include
   OBJECT_DIR = CMakeFiles/Math.dir
   OBJECT_FILE_DIR = CMakeFiles/Math.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/Math.dir/
+  TARGET_PDB = libMath.pdb
+
+build CMakeFiles/Math.dir/src/vector.cpp.o: CXX_COMPILER__Math_unscanned_Debug /home/ayanami/C++/game_engine/math/src/vector.cpp || cmake_object_order_depends_target_Math
+  DEFINES = -DMath_EXPORTS
+  DEP_FILE = CMakeFiles/Math.dir/src/vector.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fPIC
+  INCLUDES = -I/home/ayanami/C++/game_engine/math/include
+  OBJECT_DIR = CMakeFiles/Math.dir
+  OBJECT_FILE_DIR = CMakeFiles/Math.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/Math.dir/
+  TARGET_PDB = libMath.pdb
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target Math
+# Link build statements for SHARED_LIBRARY target Math
 
 
 #############################################
-# Link the static library libMath.a
+# Link the shared library libMath.so
 
-build libMath.a: CXX_STATIC_LIBRARY_LINKER__Math_Debug CMakeFiles/Math.dir/src/vector.cpp.o
+build libMath.so: CXX_SHARED_LIBRARY_LINKER__Math_Debug CMakeFiles/Math.dir/src/exception.cpp.o CMakeFiles/Math.dir/src/vector.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/Math.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = libMath.a
-  TARGET_PDB = Math.a.dbg
+  SONAME = libMath.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_COMPILE_PDB = CMakeFiles/Math.dir/
+  TARGET_FILE = libMath.so
+  TARGET_PDB = libMath.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/home/ayanami/game engine/math/build" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/ayanami/C++/game_engine/math/build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -88,7 +104,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/home/ayanami/game engine/math/build" && /usr/bin/cmake --regenerate-during-build -S"/home/ayanami/game engine/math" -B"/home/ayanami/game engine/math/build"
+  COMMAND = cd /home/ayanami/C++/game_engine/math/build && /usr/bin/cmake --regenerate-during-build -S/home/ayanami/C++/game_engine/math -B/home/ayanami/C++/game_engine/math/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -98,7 +114,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Math: phony libMath.a
+build Math: phony libMath.so
 
 # =============================================================================
 # Folder targets.
@@ -106,9 +122,9 @@ build Math: phony libMath.a
 # =============================================================================
 
 #############################################
-# Folder: /home/ayanami/game engine/math/build
+# Folder: /home/ayanami/C++/game_engine/math/build
 
-build all: phony libMath.a
+build all: phony libMath.so
 
 # =============================================================================
 # Built-in targets
@@ -117,14 +133,14 @@ build all: phony libMath.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/ayanami/game$ engine/math/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/ayanami/C++/game_engine/math/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/ayanami/game$ engine/math/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
+build /home/ayanami/C++/game_engine/math/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -1,8 +1,14 @@
 [
 {
-  "directory": "/home/ayanami/game engine/math/build",
-  "command": "/usr/bin/g++ -I\"/home/ayanami/game engine/math/include\" -g -std=gnu++17 -o CMakeFiles/Math.dir/src/vector.cpp.o -c \"/home/ayanami/game engine/math/src/vector.cpp\"",
-  "file": "/home/ayanami/game engine/math/src/vector.cpp",
+  "directory": "/home/ayanami/C++/game_engine/math/build",
+  "command": "/usr/bin/g++ -DMath_EXPORTS -I/home/ayanami/C++/game_engine/math/include -g -std=gnu++17 -fPIC -o CMakeFiles/Math.dir/src/exception.cpp.o -c /home/ayanami/C++/game_engine/math/src/exception.cpp",
+  "file": "/home/ayanami/C++/game_engine/math/src/exception.cpp",
+  "output": "CMakeFiles/Math.dir/src/exception.cpp.o"
+},
+{
+  "directory": "/home/ayanami/C++/game_engine/math/build",
+  "command": "/usr/bin/g++ -DMath_EXPORTS -I/home/ayanami/C++/game_engine/math/include -g -std=gnu++17 -fPIC -o CMakeFiles/Math.dir/src/vector.cpp.o -c /home/ayanami/C++/game_engine/math/src/vector.cpp",
+  "file": "/home/ayanami/C++/game_engine/math/src/vector.cpp",
   "output": "CMakeFiles/Math.dir/src/vector.cpp.o"
 }
 ]
