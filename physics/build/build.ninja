@@ -41,7 +41,7 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/ayanami/C++/game_engine/physics/build/
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target Physics
+# Object build statements for SHARED_LIBRARY target Physics
 
 
 #############################################
@@ -49,35 +49,64 @@ cmake_ninja_workdir = /home/ayanami/C++/game_engine/physics/build/
 
 build cmake_object_order_depends_target_Physics: phony || cmake_object_order_depends_target_Math cmake_object_order_depends_target_Metronome
 
+build CMakeFiles/Physics.dir/src/measurement_unit/displacement_unit.cpp.o: CXX_COMPILER__Physics_unscanned_Debug /home/ayanami/C++/game_engine/physics/src/measurement_unit/displacement_unit.cpp || cmake_object_order_depends_target_Physics
+  DEFINES = -DPhysics_EXPORTS
+  DEP_FILE = CMakeFiles/Physics.dir/src/measurement_unit/displacement_unit.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fPIC
+  INCLUDES = -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include
+  OBJECT_DIR = CMakeFiles/Physics.dir
+  OBJECT_FILE_DIR = CMakeFiles/Physics.dir/src/measurement_unit
+
+build CMakeFiles/Physics.dir/src/measurement_unit/mass_unit.cpp.o: CXX_COMPILER__Physics_unscanned_Debug /home/ayanami/C++/game_engine/physics/src/measurement_unit/mass_unit.cpp || cmake_object_order_depends_target_Physics
+  DEFINES = -DPhysics_EXPORTS
+  DEP_FILE = CMakeFiles/Physics.dir/src/measurement_unit/mass_unit.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fPIC
+  INCLUDES = -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include
+  OBJECT_DIR = CMakeFiles/Physics.dir
+  OBJECT_FILE_DIR = CMakeFiles/Physics.dir/src/measurement_unit
+
 build CMakeFiles/Physics.dir/src/newton_physics.cpp.o: CXX_COMPILER__Physics_unscanned_Debug /home/ayanami/C++/game_engine/physics/src/newton_physics.cpp || cmake_object_order_depends_target_Physics
+  DEFINES = -DPhysics_EXPORTS
   DEP_FILE = CMakeFiles/Physics.dir/src/newton_physics.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -g -std=gnu++17 -fPIC
   INCLUDES = -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include
   OBJECT_DIR = CMakeFiles/Physics.dir
   OBJECT_FILE_DIR = CMakeFiles/Physics.dir/src
 
 build CMakeFiles/Physics.dir/src/object.cpp.o: CXX_COMPILER__Physics_unscanned_Debug /home/ayanami/C++/game_engine/physics/src/object.cpp || cmake_object_order_depends_target_Physics
+  DEFINES = -DPhysics_EXPORTS
   DEP_FILE = CMakeFiles/Physics.dir/src/object.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -g -std=gnu++17 -fPIC
+  INCLUDES = -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include
+  OBJECT_DIR = CMakeFiles/Physics.dir
+  OBJECT_FILE_DIR = CMakeFiles/Physics.dir/src
+
+build CMakeFiles/Physics.dir/src/physics_exception.cpp.o: CXX_COMPILER__Physics_unscanned_Debug /home/ayanami/C++/game_engine/physics/src/physics_exception.cpp || cmake_object_order_depends_target_Physics
+  DEFINES = -DPhysics_EXPORTS
+  DEP_FILE = CMakeFiles/Physics.dir/src/physics_exception.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fPIC
   INCLUDES = -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include
   OBJECT_DIR = CMakeFiles/Physics.dir
   OBJECT_FILE_DIR = CMakeFiles/Physics.dir/src
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target Physics
+# Link build statements for SHARED_LIBRARY target Physics
 
 
 #############################################
-# Link the static library libPhysics.a
+# Link the shared library libPhysics.so
 
-build libPhysics.a: CXX_STATIC_LIBRARY_LINKER__Physics_Debug CMakeFiles/Physics.dir/src/newton_physics.cpp.o CMakeFiles/Physics.dir/src/object.cpp.o || math/libMath.so metronome/libMetronome.so
+build libPhysics.so: CXX_SHARED_LIBRARY_LINKER__Physics_Debug CMakeFiles/Physics.dir/src/measurement_unit/displacement_unit.cpp.o CMakeFiles/Physics.dir/src/measurement_unit/mass_unit.cpp.o CMakeFiles/Physics.dir/src/newton_physics.cpp.o CMakeFiles/Physics.dir/src/object.cpp.o CMakeFiles/Physics.dir/src/physics_exception.cpp.o | math/libMath.so metronome/libMetronome.so || math/libMath.so metronome/libMetronome.so
   LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/ayanami/C++/game_engine/physics/build/math:/home/ayanami/C++/game_engine/physics/build/metronome  math/libMath.so  metronome/libMetronome.so
   OBJECT_DIR = CMakeFiles/Physics.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = libPhysics.a
-  TARGET_PDB = Physics.a.dbg
+  SONAME = libPhysics.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = libPhysics.so
+  TARGET_PDB = Physics.so.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Test
@@ -103,10 +132,10 @@ build CMakeFiles/Test.dir/test/main.cpp.o: CXX_COMPILER__Test_unscanned_Debug /h
 #############################################
 # Link the executable Test
 
-build Test: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles/Test.dir/test/main.cpp.o | libPhysics.a math/libMath.so metronome/libMetronome.so || libPhysics.a math/libMath.so metronome/libMetronome.so
+build Test: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles/Test.dir/test/main.cpp.o | libPhysics.so math/libMath.so metronome/libMetronome.so || libPhysics.so math/libMath.so metronome/libMetronome.so
   FLAGS = -g
   LINK_FLAGS = -lpthread
-  LINK_LIBRARIES = -Wl,-rpath,/home/ayanami/C++/game_engine/physics/build/math:/home/ayanami/C++/game_engine/physics/build/metronome  libPhysics.a  math/libMath.so  metronome/libMetronome.so
+  LINK_LIBRARIES = -Wl,-rpath,/home/ayanami/C++/game_engine/physics/build:/home/ayanami/C++/game_engine/physics/build/math:/home/ayanami/C++/game_engine/physics/build/metronome  libPhysics.so  math/libMath.so  metronome/libMetronome.so
   OBJECT_DIR = CMakeFiles/Test.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -277,7 +306,7 @@ build Math: phony math/libMath.so
 
 build Metronome: phony metronome/libMetronome.so
 
-build Physics: phony libPhysics.a
+build Physics: phony libPhysics.so
 
 build libMath.so: phony math/libMath.so
 
@@ -291,7 +320,7 @@ build libMetronome.so: phony metronome/libMetronome.so
 #############################################
 # Folder: /home/ayanami/C++/game_engine/physics/build
 
-build all: phony libPhysics.a Test math/all metronome/all
+build all: phony libPhysics.so Test math/all metronome/all
 
 # =============================================================================
 

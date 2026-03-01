@@ -149,12 +149,12 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/ayanami/C++/game_engine/physics/build/math:/home/ayanami/C++/game_engine/physics/build/metronome",
+				"fragment" : "-Wl,-rpath,/home/ayanami/C++/game_engine/physics/build:/home/ayanami/C++/game_engine/physics/build/math:/home/ayanami/C++/game_engine/physics/build/metronome",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "libPhysics.a",
+				"fragment" : "libPhysics.so",
 				"role" : "libraries"
 			},
 			{

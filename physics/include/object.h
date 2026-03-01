@@ -3,6 +3,7 @@
 
 #include "vector.h"
 #include "newton_physics.h"
+#include"measurement_unit/mass_unit.h"
 #include <string>
 #include <queue>
 #include <thread>
@@ -11,8 +12,7 @@
 class Object // 物体
 {
 private:
-    Velocity v;
-    Mass m;
+    MeasurementUnit::MassUnit::KiloGram m;
     std::queue<Force> forces;
 
     std::thread movement;
@@ -25,6 +25,7 @@ private:
     bool alive;
 
 public:
+    Velocity v;
     Vector position;
     Object(std::string &name, Mass &m, Vector &position);
 

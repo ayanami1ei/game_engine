@@ -1,15 +1,33 @@
 [
 {
   "directory": "/home/ayanami/C++/game_engine/physics/build",
-  "command": "/usr/bin/g++ -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include -g -std=gnu++17 -o CMakeFiles/Physics.dir/src/newton_physics.cpp.o -c /home/ayanami/C++/game_engine/physics/src/newton_physics.cpp",
+  "command": "/usr/bin/g++ -DPhysics_EXPORTS -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include -g -std=gnu++17 -fPIC -o CMakeFiles/Physics.dir/src/measurement_unit/displacement_unit.cpp.o -c /home/ayanami/C++/game_engine/physics/src/measurement_unit/displacement_unit.cpp",
+  "file": "/home/ayanami/C++/game_engine/physics/src/measurement_unit/displacement_unit.cpp",
+  "output": "CMakeFiles/Physics.dir/src/measurement_unit/displacement_unit.cpp.o"
+},
+{
+  "directory": "/home/ayanami/C++/game_engine/physics/build",
+  "command": "/usr/bin/g++ -DPhysics_EXPORTS -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include -g -std=gnu++17 -fPIC -o CMakeFiles/Physics.dir/src/measurement_unit/mass_unit.cpp.o -c /home/ayanami/C++/game_engine/physics/src/measurement_unit/mass_unit.cpp",
+  "file": "/home/ayanami/C++/game_engine/physics/src/measurement_unit/mass_unit.cpp",
+  "output": "CMakeFiles/Physics.dir/src/measurement_unit/mass_unit.cpp.o"
+},
+{
+  "directory": "/home/ayanami/C++/game_engine/physics/build",
+  "command": "/usr/bin/g++ -DPhysics_EXPORTS -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include -g -std=gnu++17 -fPIC -o CMakeFiles/Physics.dir/src/newton_physics.cpp.o -c /home/ayanami/C++/game_engine/physics/src/newton_physics.cpp",
   "file": "/home/ayanami/C++/game_engine/physics/src/newton_physics.cpp",
   "output": "CMakeFiles/Physics.dir/src/newton_physics.cpp.o"
 },
 {
   "directory": "/home/ayanami/C++/game_engine/physics/build",
-  "command": "/usr/bin/g++ -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include -g -std=gnu++17 -o CMakeFiles/Physics.dir/src/object.cpp.o -c /home/ayanami/C++/game_engine/physics/src/object.cpp",
+  "command": "/usr/bin/g++ -DPhysics_EXPORTS -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include -g -std=gnu++17 -fPIC -o CMakeFiles/Physics.dir/src/object.cpp.o -c /home/ayanami/C++/game_engine/physics/src/object.cpp",
   "file": "/home/ayanami/C++/game_engine/physics/src/object.cpp",
   "output": "CMakeFiles/Physics.dir/src/object.cpp.o"
+},
+{
+  "directory": "/home/ayanami/C++/game_engine/physics/build",
+  "command": "/usr/bin/g++ -DPhysics_EXPORTS -I/home/ayanami/C++/game_engine/physics/../math/include -I/home/ayanami/C++/game_engine/physics/../metronome/include -I/home/ayanami/C++/game_engine/physics/include -I/home/ayanami/C++/game_engine/math/include -I/home/ayanami/C++/game_engine/metronome/include -g -std=gnu++17 -fPIC -o CMakeFiles/Physics.dir/src/physics_exception.cpp.o -c /home/ayanami/C++/game_engine/physics/src/physics_exception.cpp",
+  "file": "/home/ayanami/C++/game_engine/physics/src/physics_exception.cpp",
+  "output": "CMakeFiles/Physics.dir/src/physics_exception.cpp.o"
 },
 {
   "directory": "/home/ayanami/C++/game_engine/physics/build",

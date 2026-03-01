@@ -1,4 +1,5 @@
 #include"newton_physics.h"
+#include"math_exception.h"
 
 namespace NewtonPhysics
 {

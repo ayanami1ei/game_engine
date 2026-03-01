@@ -23,7 +23,7 @@ file(GLOB_RECURSE TEST_FILES
     "${PROJECT_SOURCE_DIR}/test/*.cpp"
 )
 
-add_library(Physics STATIC ${SRC_FILES})
+add_library(Physics SHARED ${SRC_FILES})
 add_executable(Test ${TEST_FILES})
 
 # Find pthreads and link where needed
